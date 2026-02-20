@@ -1,0 +1,85 @@
+<!-- ChatGPT prompt: please generate html for a mobile-responsive top bar -->
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    background-color: #457338;
+    color: white;
+    padding: 0 1rem;
+  }
+
+  .topbar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Oswald';
+  }
+
+  nav {
+    display: flex;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+    transition: opacity 0.2s ease;
+  }
+
+  nav a:hover {
+    opacity: 0.7;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    nav {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #111827;
+      flex-direction: column;
+      align-items: center;
+      display: none;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      margin: 0.75rem 0;
+    }
+  }
+</style>
+
+<body>
+<header>
+  <div class="topbar">
+    <div class="logo">Northern Rio Grande Sporting Club</div>
+
+    <nav>
+      <a [routerLink]="['']">Home</a>
+      <a [routerLink]="['upcoming-events']">Upcoming 4H Events</a>
+      <a [routerLink]="['about']">About</a>
+      <a [routerLink]="['contact']">Contact Us</a>
+      <a [routerLink]="['faq']">FAQ</a>
+    </nav>
+  </div>
+</header>
+</body>
